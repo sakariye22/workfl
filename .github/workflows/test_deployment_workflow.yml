@@ -16,6 +16,6 @@ jobs:
       - name: Echo a message
         run: echo "Test and Deployment Workflow triggered by approval."
       - name: Merge PR
-        if: contains(fromJson('["sakariye22"]'), github.actor)
+        if: contains(fromJson('["sakariye223"]'), github.actor)
         run: echo "PR would be merged now by ${github.actor}"
         # Replace the echo command with actual merge commands if needed later
