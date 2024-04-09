@@ -25,6 +25,24 @@ export default function RestaurantScreen() {
         <View style = {{borderTopLeftRadius : 40, borderTopRightRadius : 40}} className = "bg-white -mt-12 pt-6 ">
           <View className ="px-5">
           <Text className="text-3xl font-bold">{item.name} </Text>
+          <View className="flex-row space-x-2 my-1"> 
+                <View className="flex-row items-center space-x-1">
+                <Image source={require('../assets/images/fullStar.png')} className="h-4 w-4" />
+                <Text className="text-xs">
+                     <Text className="text-green-700">{item.stars}</Text>
+                <Text className="text-gray-700"> ({item.reviews} review) . <Text className="font-semibold">{item.category}</Text>
+ </Text>
+              </Text>
+            </View>
+            <Text className="font-semibold">{item.category}</Text>
+          </View>
+          <View className="flex-row items-center space-x-1">
+            <Icon.MapPin color="gray" width="15" height="15" />
+            <Text className="text-gray-700 text-xs">Nearby .  {item.address}</Text>
+        
+          
+          </View>
+          <Text className="text-gray-500 mt-2">{item.description}</Text>
           </View>
 
 
