@@ -1,4 +1,4 @@
-import { View, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { View, ScrollView, Image, TouchableOpacity,Text } from 'react-native';
 import React from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import * as Icon from 'react-native-feather';
@@ -21,6 +21,13 @@ export default function RestaurantScreen() {
                 className="absolute top-14 bg-gray-50 p-2 rounded-full shadow">
                    <Icon.ArrowLeft strokeWidth={3} stroke={themeColors.bgColor(1)}/>
             </TouchableOpacity>
+        </View>
+        <View style = {{borderTopLeftRadius : 40, borderTopRightRadius : 40}} className = "bg-white -mt-12 pt-6 ">
+          <View className ="px-5">
+          <Text className="text-3xl font-bold">{item.name} </Text>
+          </View>
+
+
         </View>
       </ScrollView>
     </View>
