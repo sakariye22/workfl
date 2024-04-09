@@ -26,7 +26,7 @@ export default function HomeScreen() {
 
         </View>
         <View style = {{backgroundColor : themeColors.bgColor(2)}} className = "p-3 rounded-full">
-          <Icon.Sliders height="20" width="20" strokeWidth= {2.5} stroke ="red"></Icon.Sliders>
+          <Icon.Sliders height="20" width="20" strokeWidth= {2.5} stroke ="white"></Icon.Sliders>
         </View>
       </View>
       {/*main*/}

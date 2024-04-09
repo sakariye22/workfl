@@ -15,10 +15,11 @@ export default function RestaurantScreen() {
         <View className="relative">
           {/* Adjusted to use item.image directly */}
           <Image className="w-full h-72" source={item.image} />
-          <TouchableOpacity className ='absloute top-14 left-4 bg-gray-50 p-2 rounded-full shadow '>
-            <Icon.ArrowLeft  strokeWidth={3} stroke ={themeColors.bgColor (1)} />
-
-          </TouchableOpacity>
+          <TouchableOpacity
+                onPress={() => navigation.goBack()}
+                className="absolute top-14 bg-gray-50 p-2 rounded-full shadow">
+                   <Icon.ArrowLeft strokeWidth={3} stroke={themeColors.bgColor(1)}/>
+            </TouchableOpacity>
         </View>
       </ScrollView>
     </View>
