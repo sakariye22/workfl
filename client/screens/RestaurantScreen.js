@@ -1,10 +1,11 @@
 import { View, ScrollView, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import * as Icon from 'react-native-feather';
 import { themeColors } from '../theme';
 
 export default function RestaurantScreen() {
+  const navigation = useNavigation();
   const route = useRoute(); // Get the current route
   const item = route.params; // Directly use route.params to access the passed item
 
