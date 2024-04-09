@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import * as Icon from 'react-native-feather';
 import { themeColors } from '../theme';
+import DishRow from '../components/dishRow';
 
 export default function RestaurantScreen() {
   const navigation = useNavigation();
@@ -50,6 +51,9 @@ export default function RestaurantScreen() {
         <View className ="pb-36 bg-white">
           <Text className="px-4 py text-2xl font-bold">Menu</Text>
           {/*dishes*/}
+          {
+            item.dishes.map ((dish, index)=> <DishRow item = {{...dish }} key = {index}/>)
+          }
         </View>
       </ScrollView>
     </View>
