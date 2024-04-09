@@ -47,6 +47,10 @@ export default function RestaurantScreen() {
 
 
         </View>
+        <View className ="pb-36 bg-white">
+          <Text className="px-4 py text-2xl font-bold">Menu</Text>
+          {/*dishes*/}
+        </View>
       </ScrollView>
     </View>
   );
