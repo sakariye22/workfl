@@ -8,6 +8,7 @@ import Categories from '../components/categories';
 import { featured } from '../constants';
 import FeaturedRow from '../components/featuredRow';
 
+
 export default function HomeScreen() {
   return (
     <SafeAreaView className = "bg-white">
@@ -19,16 +20,17 @@ export default function HomeScreen() {
           <TextInput placeholder='Restaurants' className ='ml-2 flex-1' />
           <View className ="flex-row items-center spcae-x-1 border-0 border-l-2 pl-2 border-l-gray-300">
             <Icon.MapPin height ="20" width="20" stroke ="gray"></Icon.MapPin>
+            
             <Text className = "text-gray-600">New York ,NYC</Text>
           </View>
 
         </View>
-        <View style = {{backgroundColor : themeColors.bgColor(1)}} className = "p-3 rounded-full">
-          <Icon.Sliders height="20" width="20" strokeWidth= {2.5} stroke ="white"></Icon.Sliders>
+        <View style = {{backgroundColor : themeColors.bgColor(2)}} className = "p-3 rounded-full">
+          <Icon.Sliders height="20" width="20" strokeWidth= {2.5} stroke ="red"></Icon.Sliders>
         </View>
       </View>
       {/*main*/}
-      <ScrollView showsHorizontalScrollIndicator= {false}  contentContainerStyle= {{paddingBottom :20 }}></ScrollView>
+      <ScrollView showsHorizontalScrollIndicator= {false}  contentContainerStyle= {{paddingBottom :20 }}>
             {/*categories*/}
             <Categories/>
                 {/*featured*/}
@@ -43,6 +45,7 @@ export default function HomeScreen() {
                     })
                   }
                 </View>
+                </ScrollView>
       </SafeAreaView>
     
   )
